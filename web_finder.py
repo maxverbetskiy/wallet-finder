@@ -25,7 +25,7 @@ HTML_PAGE = """
     <meta charset="UTF-8">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wallet Finder v2.1</title>
+    <title>Wallet Finder</title>
     <style>
         :root { --bg-color: #0f172a; --card-bg: #1e293b; --text-main: #f8fafc; --accent: #3b82f6; --accent-hover: #2563eb; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-color); color: var(--text-main); display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
@@ -70,8 +70,8 @@ HTML_PAGE = """
 </head>
 <body>
 <div class="container">
-    <h1>🕵️ Wallet Finder v2.1</h1>
-    <p class="subtitle">Search addresses by partial match</p>
+    <h1>🕵️ Wallet Finder</h1>
+    <p class="subtitle">Made with ❤️ for researchers</p>
 
     <div class="network-switch">
         <div class="radio-option active" id="btn-evm" onclick="setNetwork('evm')">Ethereum / BSC</div>
@@ -266,4 +266,5 @@ if __name__ == '__main__':
     # Это важно для хостинга: Flask должен слушать HOST/PORT, который дает Render
     port = int(os.environ.get("PORT", 5000))
     # Timer(1, open_browser).start() # Убираем автозапуск браузера
+
     app.run(host='0.0.0.0', port=port) # <-- ИЗМЕНЕНО
